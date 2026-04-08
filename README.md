@@ -79,7 +79,10 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 |-------|-------------|
 | `aridity_actual` | Monthly mean ratio of actual evapotranspiration to precipitation |
 | `aridity_potential` | Monthly mean ratio of potential evapotranspiration to precipitation |
-| `flood_recurrence` | Return values of annual maximum river discharge (2, 5, 10, 50 year) |
+| `flood_recurrence_2_years_return_period` | Return value of annual maximum river discharge at 2-year return period |
+| `flood_recurrence_5_years_return_period` | Return value of annual maximum river discharge at 5-year return period |
+| `flood_recurrence_10_years_return_period` | Return value of annual maximum river discharge at 10-year return period |
+| `flood_recurrence_50_years_return_period` | Return value of annual maximum river discharge at 50-year return period |
 | `maximum_river_discharge` | Mean annual daily maximum discharge over 30 years |
 | `mean_runoff` | Monthly or annual mean values of daily runoff over 30 years |
 | `mean_soil_moisture` | Monthly or annual mean soil moisture as fraction of field capacity |
@@ -239,17 +242,18 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `10m_wind_speed` |
 | `10m_u_component_of_the_wind` |
 | `10m_v_component_of_the_wind` |
+| `200hpa_temperature` |
 | `200hpa_u_component_of_the_wind` |
 | `200hpa_v_component_of_the_wind` |
+| `2m_air_temperature` |
 | `2m_relative_humidity` |
-| `2m_specific_humidity` |
-| `2m_temperature` |
+| `2m_surface_specific_humidity` |
 | `500hpa_geopotential_height` |
 | `850hpa_u_component_of_the_wind` |
 | `850hpa_v_component_of_the_wind` |
+| `evaporation` |
 | `land_area_fraction` |
 | `maximum_2m_temperature_in_the_last_24_hours` |
-| `mean_evaporation_flux` |
 | `mean_precipitation_flux` |
 | `mean_sea_level_pressure` |
 | `minimum_2m_temperature_in_the_last_24_hours` |
@@ -327,6 +331,31 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `snow_depth_water_equivalent` | Instantaneous snow water equivalent |
 | `soil_wetness_index` | Root zone soil wetness index (0–1) |
 | `volumetric_soil_moisture` | Soil moisture in m³/m³ |
+| `elevation_v2_0` | Static elevation grid (model version 2.0) |
+| `elevation_v3_0` | Static elevation grid (model version 3.0) |
+| `elevation_v3_5` | Static elevation grid (model version 3.5) |
+| `elevation_v4_0` | Static elevation grid (model version 4.0) |
+| `elevation_v5_0` | Static elevation grid (model version 5.0) |
+| `field_capacity_v2_0` | Soil field capacity (model version 2.0) |
+| `field_capacity_v3_0` | Soil field capacity (model version 3.0) |
+| `field_capacity_v3_5` | Soil field capacity (model version 3.5) |
+| `field_capacity_v4_0` | Soil field capacity (model version 4.0) |
+| `field_capacity_v5_0` | Soil field capacity (model version 5.0) |
+| `soil_depth_v2_0` | Soil depth (model version 2.0) |
+| `soil_depth_v3_0` | Soil depth (model version 3.0) |
+| `soil_depth_v3_5` | Soil depth (model version 3.5) |
+| `soil_depth_v4_0` | Soil depth (model version 4.0) |
+| `soil_depth_v5_0` | Soil depth (model version 5.0) |
+| `upstream_area_v2_0` | Upstream catchment area (model version 2.0) |
+| `upstream_area_v3_0` | Upstream catchment area (model version 3.0) |
+| `upstream_area_v3_5` | Upstream catchment area (model version 3.5) |
+| `upstream_area_v4_0` | Upstream catchment area (model version 4.0) |
+| `upstream_area_v5_0` | Upstream catchment area (model version 5.0) |
+| `wilting_point_v2_0` | Soil wilting point (model version 2.0) |
+| `wilting_point_v3_0` | Soil wilting point (model version 3.0) |
+| `wilting_point_v3_5` | Soil wilting point (model version 3.5) |
+| `wilting_point_v4_0` | Soil wilting point (model version 4.0) |
+| `wilting_point_v5_0` | Soil wilting point (model version 5.0) |
 
 ---
 
@@ -351,3 +380,28 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `snow_depth_water_equivalent` | Instantaneous snow water equivalent |
 | `soil_wetness_index` | Root zone soil wetness index (0–1) |
 | `volumetric_soil_moisture` | Soil moisture in m³/m³ |
+| `elevation_v2_0` | Static elevation grid (model version 2.0) |
+| `elevation_v3_0` | Static elevation grid (model version 3.0) |
+| `elevation_v3_5` | Static elevation grid (model version 3.5) |
+| `elevation_v4_0` | Static elevation grid (model version 4.0) |
+| `elevation_v5_0` | Static elevation grid (model version 5.0) |
+| `field_capacity_v2_0` | Soil field capacity (model version 2.0) |
+| `field_capacity_v3_0` | Soil field capacity (model version 3.0) |
+| `field_capacity_v3_5` | Soil field capacity (model version 3.5) |
+| `field_capacity_v4_0` | Soil field capacity (model version 4.0) |
+| `field_capacity_v5_0` | Soil field capacity (model version 5.0) |
+| `soil_depth_v2_0` | Soil depth (model version 2.0) |
+| `soil_depth_v3_0` | Soil depth (model version 3.0) |
+| `soil_depth_v3_5` | Soil depth (model version 3.5) |
+| `soil_depth_v4_0` | Soil depth (model version 4.0) |
+| `soil_depth_v5_0` | Soil depth (model version 5.0) |
+| `upstream_area_v2_0` | Upstream catchment area (model version 2.0) |
+| `upstream_area_v3_0` | Upstream catchment area (model version 3.0) |
+| `upstream_area_v3_5` | Upstream catchment area (model version 3.5) |
+| `upstream_area_v4_0` | Upstream catchment area (model version 4.0) |
+| `upstream_area_v5_0` | Upstream catchment area (model version 5.0) |
+| `wilting_point_v2_0` | Soil wilting point (model version 2.0) |
+| `wilting_point_v3_0` | Soil wilting point (model version 3.0) |
+| `wilting_point_v3_5` | Soil wilting point (model version 3.5) |
+| `wilting_point_v4_0` | Soil wilting point (model version 4.0) |
+| `wilting_point_v5_0` | Soil wilting point (model version 5.0) |
