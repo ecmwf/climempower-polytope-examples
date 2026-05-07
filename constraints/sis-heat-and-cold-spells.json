@@ -1,0 +1,4 @@
+[
+  {"definition": ["climatological_related", "health_related", "country_related"], "ensemble_statistic": ["ensemble_members_average", "ensemble_members_standard_deviation"], "experiment": ["rcp4_5", "rcp8_5"], "variable": ["heat_wave_days"]},
+  {"definition": ["country_related"], "ensemble_statistic": ["ensemble_members_average", "ensemble_members_standard_deviation"], "experiment": ["rcp4_5", "rcp8_5"], "variable": ["cold_spell_days"]}
+]
