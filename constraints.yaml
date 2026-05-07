@@ -1,0 +1,1239 @@
+# =============================================================================
+# Dataset Constraints
+# =============================================================================
+# Defines the valid combinations of dimension values for each dataset.
+# Each dataset lists its dimensions with:
+#   - valid_values: all accepted values (from CDS documentation)
+#   - required: whether the user must supply this dimension
+#   - default: the default value if not supplied
+#   - constraints: rules linking this dimension to others
+#
+# IMPORTANT: The definitive valid combinations are in the per-dataset JSON files
+# in the constraints/ directory, downloaded from the CDS API. Each JSON file is
+# an array of objects where each object represents one valid combination of ALL
+# parameters. A request is valid only if it matches at least one entry.
+#
+# This YAML provides a human-readable summary. For programmatic validation,
+# use the JSON files.
+#
+# Sources: CDS/EWDS API constraint endpoints (official), dataset documentation.
+# To refresh: python constraints/download_constraints.py
+# =============================================================================
+
+sis-heat-and-cold-spells:
+  description: "Heat waves and cold spells in Europe derived from climate projections"
+  temporal_coverage: "1986 to 2085"
+  horizontal_resolution: "0.1° x 0.1°"
+  official_constraints: "constraints/sis-heat-and-cold-spells.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - cold_spell_days
+        - heat_wave_days
+    definition:
+      required: false
+      default: country_related
+      valid_values:
+        - climatological_related
+        - health_related
+        - country_related
+    experiment:
+      required: false
+      default: [rcp8_5]
+      valid_values:
+        - rcp4_5
+        - rcp8_5
+    ensemble_statistic:
+      required: false
+      default: [ensemble_members_average]
+      valid_values:
+        - ensemble_members_average
+        - ensemble_members_standard_deviation
+  constraints:
+    - description: "cold_spell_days ONLY available with definition=country_related"
+      rule:
+        variable: [cold_spell_days]
+        definition: [country_related]
+    - description: "heat_wave_days available with ALL three definitions"
+      rule:
+        variable: [heat_wave_days]
+        definition: [climatological_related, health_related, country_related]
+
+sis-hydrology-variables-derived-projections:
+  description: "Hydrology-related climate impact indicators from 1970 to 2100"
+  temporal_coverage: "1970 to 2100"
+  horizontal_resolution: "5km x 5km and catchments"
+  official_constraints: "constraints/sis-hydrology-variables-derived-projections.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - river_discharge
+        - mean_runoff
+        - mean_soil_moisture
+        - maximum_river_discharge
+        - minimum_river_discharge
+        - flood_recurrence_2_years_return_period
+        - flood_recurrence_5_years_return_period
+        - flood_recurrence_10_years_return_period
+        - flood_recurrence_50_years_return_period
+        - aridity_actual
+        - aridity_potential
+        - wetness_actual
+        - wetness_potential
+        - total_nitrogen_concentration_in_catchments
+        - total_nitrogen_concentration_in_local_streams
+        - total_nitrogen_load_in_catchments
+        - total_phosphorus_concentration_in_catchments
+        - total_phosphorus_concentration_in_local_streams
+        - total_phosphorus_load_in_catchments
+        - water_temperature_in_catchments
+        - water_temperature_in_local_streams
+    period:
+      required: true
+      valid_values:
+        - "1971_2000"
+        - "2011_2040"
+        - "2041_2070"
+        - "2071_2100"
+        # Degree scenario periods
+        - "1_5_c"
+        - "2_0_c"
+        - "3_0_c"
+        # Decade periods (for essential_climate_variables / daily)
+        - "1971_1980"
+        - "1981_1990"
+        - "1991_2000"
+        - "2001_2005"
+        - "2006_2010"
+        - "2011_2020"
+        - "2021_2030"
+        - "2031_2040"
+        - "2041_2050"
+        - "2051_2060"
+        - "2061_2070"
+        - "2071_2080"
+        - "2081_2090"
+        - "2091_2100"
+    time_aggregation:
+      required: true
+      valid_values:
+        - annual_mean
+        - monthly_mean
+        - daily
+    product_type:
+      required: false
+      default: climate_impact_indicators
+      valid_values:
+        - climate_impact_indicators
+        - essential_climate_variables
+    variable_type:
+      required: false
+      default: absolute_values
+      valid_values:
+        - absolute_values
+        - relative_change
+        - absolute_change
+    experiment:
+      required: false
+      default: [historical]
+      valid_values:
+        - historical
+        - rcp_2_6
+        - rcp_4_5
+        - rcp_8_5
+        - degree_scenario
+    hydrological_model:
+      required: false
+      default: [e_hypegrid]
+      valid_values:
+        - e_hypegrid
+        - e_hypecatch_m00
+        - e_hypecatch_m01
+        - e_hypecatch_m02
+        - e_hypecatch_m03
+        - e_hypecatch_m04
+        - e_hypecatch_m05
+        - e_hypecatch_m06
+        - e_hypecatch_m07
+        - vic_wur
+    rcm:
+      required: false
+      default: csc_remo2009
+      valid_values:
+        - csc_remo2009
+        - cclm4_8_17
+        - hirham5
+        - racmo22e
+        - rca4
+    gcm:
+      required: false
+      default: mpi_esm_lr
+      valid_values:
+        - mpi_esm_lr
+        - ec_earth
+        - hadgem2_es
+        - ipsl_cm5a_mr
+        - cnrm_cm5
+    ensemble_member:
+      required: false
+      default: [r1i1p1]
+      valid_values:
+        - r1i1p1
+        - r12i1p1
+        - r2i1p1
+        - r3i1p1
+  constraints:
+    - description: "Historical experiment only valid with reference period 1971-2000 (for CIIs) or decade periods (for ECVs)"
+      rule:
+        experiment: [historical]
+        period: ["1971_2000"]
+    - description: "Future experiments valid with future periods"
+      rule:
+        experiment: [rcp_2_6, rcp_4_5, rcp_8_5]
+        period: ["2011_2040", "2041_2070", "2071_2100"]
+    - description: "Degree scenarios use degree_scenario experiment"
+      rule:
+        experiment: [degree_scenario]
+        period: ["1_5_c", "2_0_c", "3_0_c"]
+    - description: "Essential climate variables: only river_discharge with daily resolution"
+      rule:
+        product_type: [essential_climate_variables]
+        variable: [river_discharge]
+        time_aggregation: [daily]
+    - description: "Water quality vars (nitrogen, phosphorus, water_temperature) only with e_hypecatch models"
+      rule:
+        variable: [total_nitrogen_concentration_in_catchments, total_nitrogen_concentration_in_local_streams, total_nitrogen_load_in_catchments, total_phosphorus_concentration_in_catchments, total_phosphorus_concentration_in_local_streams, total_phosphorus_load_in_catchments, water_temperature_in_catchments, water_temperature_in_local_streams]
+        hydrological_model: [e_hypecatch_m00, e_hypecatch_m01, e_hypecatch_m02, e_hypecatch_m03, e_hypecatch_m04, e_hypecatch_m05, e_hypecatch_m06, e_hypecatch_m07]
+    - description: "GCM ec_earth requires ensemble_member r12i1p1; hadgem2_es and mpi_esm_lr require r1i1p1"
+      rule:
+        gcm: [ec_earth]
+        ensemble_member: [r12i1p1]
+    - description: "RCMs available per GCM: ec_earth->cclm4_8_17/racmo22e/rca4; hadgem2_es->racmo22e/rca4; mpi_esm_lr->csc_remo2009/rca4"
+      rule:
+        gcm: [mpi_esm_lr]
+        rcm: [csc_remo2009, rca4]
+
+projections-cordex-domains-single-levels:
+  description: "CORDEX regional climate model data on single levels"
+  temporal_coverage: "1951 to 2100"
+  official_constraints: "constraints/projections-cordex-domains-single-levels.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - 2m_air_temperature
+        - 10m_wind_speed
+        - 10m_u_component_of_the_wind
+        - 10m_v_component_of_the_wind
+        - 200hpa_u_component_of_the_wind
+        - 200hpa_v_component_of_the_wind
+        - 2m_relative_humidity
+        - 2m_specific_humidity
+        - 500hpa_geopotential_height
+        - 850hpa_u_component_of_the_wind
+        - 850hpa_v_component_of_the_wind
+        - land_area_fraction
+        - maximum_2m_temperature_in_the_last_24_hours
+        - mean_evaporation_flux
+        - mean_precipitation_flux
+        - mean_sea_level_pressure
+        - minimum_2m_temperature_in_the_last_24_hours
+        - orography
+        - surface_pressure
+        - surface_solar_radiation_downwards
+        - surface_thermal_radiation_downward
+        - surface_upwelling_shortwave_radiation
+        - total_cloud_cover
+        - total_run_off_flux
+    start_year:
+      required: true
+      valid_values:
+        - "1951"
+        - "1956"
+        - "1961"
+        - "1966"
+        - "1971"
+        - "1976"
+        - "1981"
+        - "1986"
+        - "1991"
+        - "1996"
+        - "2001"
+        - "2006"
+        - "2011"
+        - "2016"
+        - "2021"
+        - "2026"
+        - "2031"
+        - "2036"
+        - "2041"
+        - "2046"
+        - "2051"
+        - "2056"
+        - "2061"
+        - "2066"
+        - "2071"
+        - "2076"
+        - "2081"
+        - "2086"
+        - "2091"
+        - "2096"
+    end_year:
+      required: true
+      valid_values:
+        - "1955"
+        - "1960"
+        - "1965"
+        - "1970"
+        - "1975"
+        - "1980"
+        - "1985"
+        - "1990"
+        - "1995"
+        - "2000"
+        - "2005"
+        - "2010"
+        - "2015"
+        - "2020"
+        - "2025"
+        - "2030"
+        - "2035"
+        - "2040"
+        - "2045"
+        - "2050"
+        - "2055"
+        - "2060"
+        - "2065"
+        - "2070"
+        - "2075"
+        - "2080"
+        - "2085"
+        - "2090"
+        - "2095"
+        - "2100"
+    temporal_resolution:
+      required: true
+      valid_values:
+        - 3_hours
+        - 6_hours
+        - daily_mean
+        - monthly_mean
+        - seasonal_mean
+    domain:
+      required: false
+      default: europe
+      valid_values:
+        - africa
+        - antarctica
+        - arctic
+        - australasia
+        - central_america
+        - central_asia
+        - east_asia
+        - europe
+        - mediterranean
+        - middle_east_and_north_africa
+        - north_america
+        - south_america
+        - south_asia
+        - south_east_asia
+    experiment:
+      required: false
+      default: historical
+      valid_values:
+        - evaluation
+        - historical
+        - rcp_2_6
+        - rcp_4_5
+        - rcp_8_5
+    horizontal_resolution:
+      required: false
+      default: 0_11_degree_x_0_11_degree
+      valid_values:
+        - 0_11_degree_x_0_11_degree
+        - 0_20_degree_x_0_20_degree
+        - 0_22_degree_x_0_22_degree
+        - 0_44_degree_x_0_44_degree
+    gcm_model:
+      required: false
+      default: ichec_ec_earth
+      valid_values:
+        - cccma_canesm2
+        - cnrm_cerfacs_cnrm_cm5
+        - csiro_bom_access1_0
+        - csiro_bom_access1_3
+        - csiro_qccce_csiro_mk3_6_0
+        - ichec_ec_earth
+        - ipsl_ipsl_cm5a_mr
+        - miroc_miroc5
+        - mohc_hadgem2_es
+        - mpi_m_mpi_esm_lr
+        - mpi_m_mpi_esm_mr
+        - ncc_noresm1_m
+        - noaa_gfdl_gfdl_esm2m
+    rcm_model:
+      required: false
+      default: knmi_racmo22e
+      valid_values:
+        - clmcom_cclm4_8_17
+        - clmcom_eth_cosmo_crclim
+        - cnrm_aladin53
+        - cnrm_aladin63
+        - dmi_hirham5
+        - gerics_remo2015
+        - ictp_regcm4_6
+        - ipsl_wrf381p
+        - knmi_racmo22e
+        - mohc_hadrem3_ga7_05
+        - mpi_csc_remo2009
+        - rmib_ugent_alaro_0
+        - smhi_rca4
+        - uhoh_wrf361h
+    ensemble_member:
+      required: false
+      default: r1i1p1
+      valid_values:
+        - r1i1p1
+        - r2i1p1
+        - r3i1p1
+        - r12i1p1
+    format:
+      required: false
+      default: zip
+      valid_values:
+        - zip
+  constraints:
+    - description: "start_year and end_year must form 5-year windows (end = start + 4)"
+      rule:
+        start_year: ["1951"]
+        end_year: ["1955"]
+    - description: "Evaluation experiment covers ~1980-2010 only"
+      rule:
+        experiment: [evaluation]
+        start_year: ["1981", "1986", "1991", "1996", "2001", "2006"]
+    - description: "Historical experiment valid with years 1951-2005"
+      rule:
+        experiment: [historical]
+        start_year: ["1951", "1956", "1961", "1966", "1971", "1976", "1981", "1986", "1991", "1996", "2001"]
+    - description: "RCP scenarios valid with years 2006-2100"
+      rule:
+        experiment: [rcp_2_6, rcp_4_5, rcp_8_5]
+        start_year: ["2006", "2011", "2016", "2021", "2026", "2031", "2036", "2041", "2046", "2051", "2056", "2061", "2066", "2071", "2076", "2081", "2086", "2091", "2096"]
+    - description: "0.11 degree resolution only available for Europe and Mediterranean domains"
+      rule:
+        horizontal_resolution: [0_11_degree_x_0_11_degree]
+        domain: [europe, mediterranean]
+
+sis-tourism-fire-danger-indicators:
+  description: "Fire danger indicators for Europe from 1970 to 2098"
+  temporal_coverage: "1970 to 2098"
+  horizontal_resolution: "0.11° x 0.11°"
+  official_constraints: "constraints/sis-tourism-fire-danger-indicators.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - daily_fire_weather_index
+        - fire_weather_index
+        - seasonal_fire_weather_index
+        - number_of_days_with_moderate_fire_danger
+        - number_of_days_with_high_fire_danger
+        - number_of_days_with_very_high_fire_danger
+    period:
+      required: true
+      valid_values:
+        - "1970_2005"
+        - "2001_2005"
+        - "2006_2010"
+        - "2011_2040"
+        - "2041_2070"
+        - "2071_2098"
+    time_aggregation:
+      required: true
+      valid_values:
+        - daily_indicators
+        - seasonal_indicators
+        - annual_indicators
+    product_type:
+      required: false
+      default: single_model
+      valid_values:
+        - single_model
+        - multi_model_mean
+        - multi_model_best_case
+        - multi_model_worst_case
+    gcm_model:
+      required: false
+      default: [ec_earth]
+      valid_values:
+        - ec_earth
+        - hadgem2_es
+        - mpi_esm_lr
+        - cnrm_cm5
+        - ipsl_cm5a_mr
+    experiment:
+      required: false
+      default: historical
+      valid_values:
+        - historical
+        - rcp2_6
+        - rcp4_5
+        - rcp8_5
+    version:
+      required: false
+      default: v2_0
+      valid_values:
+        - v1_0
+        - v2_0
+  constraints:
+    - description: "Historical experiment valid only with historical periods"
+      rule:
+        experiment: [historical]
+        period: ["1970_2005", "2001_2005"]
+    - description: "Future experiments valid with future periods"
+      rule:
+        experiment: [rcp2_6, rcp4_5, rcp8_5]
+        period: ["2006_2010", "2011_2040", "2041_2070", "2071_2098"]
+    - description: "Daily fire weather index only with daily_indicators time aggregation"
+      rule:
+        variable: [daily_fire_weather_index]
+        time_aggregation: [daily_indicators]
+    - description: "Seasonal fire weather index only with seasonal_indicators"
+      rule:
+        variable: [seasonal_fire_weather_index]
+        time_aggregation: [seasonal_indicators]
+    - description: "Multi-model products not available with single_model product_type"
+      rule:
+        product_type: [multi_model_mean, multi_model_best_case, multi_model_worst_case]
+
+sis-ecde-climate-indicators:
+  description: "Climate indicators for Europe from 1940 to 2100"
+  temporal_coverage: "1940 to 2100"
+  horizontal_resolution: "0.25° x 0.25°"
+  official_constraints: "constraints/sis-ecde-climate-indicators.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - mean_temperature
+        - daily_maximum_temperature
+        - daily_minimum_temperature
+        - total_precipitation
+        - frost_days
+        - tropical_nights
+        - hot_days
+        - heatwave_days
+        - cooling_degree_days
+        - heating_degree_days
+        - growing_degree_days
+        - consecutive_dry_days
+        - extreme_precipitation_total
+        - frequency_of_extreme_precipitation
+        - maximum_consecutive_five_day_precipitation
+        - mean_wind_speed
+        - extreme_wind_speed_days
+        - fire_weather_index
+        - days_with_high_fire_danger
+        - flood_recurrence
+        - mean_river_discharge
+        - aridity_actual
+        - mean_soil_moisture
+        - duration_of_meteorological_droughts
+        - magnitude_of_meteorological_droughts
+        - relative_sea_level_rise
+        - extreme_sea_level
+        - snowfall_amount
+        - warmest_three_day_period
+        - high_utci_days
+    temporal_aggregation:
+      required: true
+      valid_values:
+        - monthly
+        - seasonal
+        - yearly
+    origin:
+      required: false
+      default: projections
+      valid_values:
+        - projections
+        - reanalysis
+    gcm:
+      required: false
+      default: [ec_earth]
+      valid_values:
+        - ec_earth
+        - hadgem2_es
+        - mpi_esm_lr
+        - cnrm_cm5
+        - ipsl_cm5a_mr
+        - noresm1_m
+    rcm:
+      required: false
+      default: [racmo22e]
+      valid_values:
+        - racmo22e
+        - cclm4_8_17
+        - hirham5
+        - rca4
+        - remo2015
+        - aladin63
+    experiment:
+      required: false
+      default: [rcp4_5]
+      valid_values:
+        - rcp2_6
+        - rcp4_5
+        - rcp8_5
+    ensemble_member:
+      required: false
+      default: [r1i1p1]
+      valid_values:
+        - r1i1p1
+        - r12i1p1
+        - r2i1p1
+        - r3i1p1
+    spatial_aggregation:
+      required: false
+      default: gridded
+      valid_values:
+        - gridded
+        - nuts_0
+        - nuts_1
+        - nuts_2
+        - nuts_3
+  constraints:
+    - description: "Reanalysis origin has no experiment/gcm/rcm dimensions"
+      rule:
+        origin: [reanalysis]
+    - description: "Hydrology variables (flood_recurrence, mean_river_discharge, aridity_actual, mean_soil_moisture) use different underlying dataset"
+      rule:
+        variable: [flood_recurrence, mean_river_discharge, aridity_actual, mean_soil_moisture]
+        temporal_aggregation: [yearly]
+    - description: "Sea level variables only available at yearly aggregation"
+      rule:
+        variable: [relative_sea_level_rise, extreme_sea_level]
+        temporal_aggregation: [yearly]
+
+sis-agroclimatic-indicators:
+  description: "Agroclimatic indicators from 1951 to 2099"
+  temporal_coverage: "1951 to 2099"
+  horizontal_resolution: "0.5° x 0.5°"
+  official_constraints: "constraints/sis-agroclimatic-indicators.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - biologically_effective_degree_days
+        - cold_spell_duration_index
+        - frost_days
+        - growing_season_length
+        - heavy_precipitation_days
+        - ice_days
+        - maximum_number_of_consecutive_dry_days
+        - maximum_number_of_consecutive_frost_days
+        - maximum_number_of_consecutive_summer_days
+        - maximum_number_of_consecutive_wet_days
+        - maximum_of_daily_maximum_temperature
+        - maximum_of_daily_minimum_temperature
+        - mean_of_daily_maximum_temperature
+        - mean_of_daily_mean_temperature
+        - mean_of_daily_minimum_temperature
+        - mean_of_diurnal_temperature_range
+        - minimum_of_daily_maximum_temperature
+        - minimum_of_daily_minimum_temperature
+        - precipitation_sum
+        - simple_daily_intensity_index
+        - summer_days
+        - tropical_nights
+        - very_heavy_precipitation_days
+        - warm_and_wet_days
+        - warm_spell_duration_index
+        - wet_days
+    period:
+      required: true
+      valid_values:
+        - "195101_198012"
+        - "198101_201012"
+        - "201101_204012"
+        - "204101_207012"
+        - "207101_209912"
+    temporal_aggregation:
+      required: true
+      valid_values:
+        - 10_day
+        - season
+        - annual
+    origin:
+      required: false
+      default: noresm1_m_model
+      valid_values:
+        - era_interim_reanalysis
+        - gfdl_esm2m_model
+        - hadgem2_es_model
+        - ipsl_cm5a_lr_model
+        - miroc_esm_chem_model
+        - noresm1_m_model
+    experiment:
+      required: false
+      default: rcp4_5
+      valid_values:
+        - historical
+        - rcp2_6
+        - rcp4_5
+        - rcp6_0
+        - rcp8_5
+    version:
+      required: false
+      default: ["1_1"]
+      valid_values:
+        - "1_0"
+        - "1_1"
+  constraints:
+    - description: "Historical experiment valid with historical periods"
+      rule:
+        experiment: [historical]
+        period: ["195101_198012", "198101_201012"]
+    - description: "Future experiments valid with future periods only"
+      rule:
+        experiment: [rcp2_6, rcp4_5, rcp6_0, rcp8_5]
+        period: ["201101_204012", "204101_207012", "207101_209912"]
+    - description: "era_interim_reanalysis ONLY available for period 198101_201012 (not 195101_198012)"
+      rule:
+        origin: [era_interim_reanalysis]
+        period: ["198101_201012"]
+        experiment: [historical]
+    - description: "Variables determine temporal_aggregation: 10_day for most, season for spell indices, annual for growing_season_length"
+      rule:
+        temporal_aggregation: [10_day]
+        variable: [biologically_effective_degree_days, frost_days, heavy_precipitation_days, ice_days, maximum_of_daily_maximum_temperature, maximum_of_daily_minimum_temperature, mean_of_daily_maximum_temperature, mean_of_daily_mean_temperature, mean_of_daily_minimum_temperature, mean_of_diurnal_temperature_range, minimum_of_daily_maximum_temperature, minimum_of_daily_minimum_temperature, precipitation_sum, simple_daily_intensity_index, summer_days, tropical_nights, very_heavy_precipitation_days, wet_days]
+    - description: "Seasonal aggregation variables"
+      rule:
+        temporal_aggregation: [season]
+        variable: [cold_spell_duration_index, maximum_number_of_consecutive_dry_days, maximum_number_of_consecutive_frost_days, maximum_number_of_consecutive_summer_days, maximum_number_of_consecutive_wet_days, warm_and_wet_days, warm_spell_duration_index]
+    - description: "Annual aggregation only for growing_season_length"
+      rule:
+        temporal_aggregation: [annual]
+        variable: [growing_season_length]
+
+efas-seasonal:
+  description: "Seasonal forecasts of river discharge by the European Flood Awareness System"
+  temporal_coverage: "November 2020 to near real-time"
+  horizontal_resolution: "1x1 arcminute (~1.5 km)"
+  official_constraints: "constraints/efas-seasonal.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - river_discharge
+        - volumetric_soil_moisture
+        - snow_depth_water_equivalent
+        - soil_wetness_index
+        - runoff_water_equivalent
+        # Auxiliary (time-invariant)
+        - elevation
+        - upstream_area
+        - soil_depth
+        - wilting_point
+        - field_capacity
+    model_levels:
+      required: false
+      default: surface_level
+      valid_values:
+        - surface_level
+        - soil_levels
+    year:
+      required: false
+      default: ["2024"]
+      valid_values:
+        - "2020"
+        - "2021"
+        - "2022"
+        - "2023"
+        - "2024"
+        - "2025"
+        - "2026"
+    month:
+      required: false
+      default: ["01"]
+      valid_values:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+    leadtime_hour:
+      required: false
+      default: ["24"]
+      valid_values:
+        - "24"
+        - "48"
+        - "72"
+        - "96"
+        - "120"
+        - "144"
+        - "168"
+        - "192"
+        - "216"
+        - "240"
+        - "264"
+        - "288"
+        - "312"
+        - "336"
+        - "360"
+        - "384"
+        - "408"
+        - "432"
+        - "456"
+        - "480"
+        - "504"
+        - "528"
+        - "552"
+        - "576"
+        - "600"
+        - "624"
+        - "648"
+        # ... up to 5160 (215 days * 24h)
+    data_format:
+      required: false
+      default: netcdf
+      valid_values:
+        - netcdf
+        - grib2
+    download_format:
+      required: false
+      default: zip
+      valid_values:
+        - zip
+        - unarchived
+    system_version:
+      required: false
+      valid_values:
+        - "operational"
+        - "version_4_0"
+  constraints:
+    - description: "Soil moisture only available at soil_levels model level"
+      rule:
+        variable: [volumetric_soil_moisture]
+        model_levels: [soil_levels]
+    - description: "River discharge and snow only at surface_level"
+      rule:
+        variable: [river_discharge, snow_depth_water_equivalent, runoff_water_equivalent, soil_wetness_index]
+        model_levels: [surface_level]
+    - description: "Version 5 available from May 2024 onwards"
+      rule:
+        system_version: ["5"]
+        year: ["2024", "2025", "2026"]
+
+efas-forecast:
+  description: "River discharge and related forecasted data by EFAS"
+  temporal_coverage: "October 2018 to near real-time (30-day delay)"
+  horizontal_resolution: "1x1 arcminute (~1.5 km)"
+  official_constraints: "constraints/efas-forecast.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - river_discharge
+        - volumetric_soil_moisture
+        - snow_depth_water_equivalent
+        - soil_wetness_index
+        - runoff_water_equivalent
+        # Auxiliary (time-invariant)
+        - elevation
+        - upstream_area
+        - soil_depth
+        - wilting_point
+        - field_capacity
+    model_levels:
+      required: false
+      default: surface_level
+      valid_values:
+        - surface_level
+        - soil_levels
+    year:
+      required: false
+      default: ["2024"]
+      valid_values:
+        - "2018"
+        - "2019"
+        - "2020"
+        - "2021"
+        - "2022"
+        - "2023"
+        - "2024"
+        - "2025"
+        - "2026"
+    month:
+      required: false
+      default: ["01"]
+      valid_values:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+    day:
+      required: false
+      default: ["01"]
+      valid_values:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+        - "13"
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+        - "27"
+        - "28"
+        - "29"
+        - "30"
+        - "31"
+    time:
+      required: false
+      default: ["00:00"]
+      valid_values:
+        - "00:00"
+        - "12:00"
+    leadtime_hour:
+      required: false
+      default: ["24"]
+      valid_values:
+        - "6"
+        - "12"
+        - "18"
+        - "24"
+        - "30"
+        - "36"
+        - "42"
+        - "48"
+        - "54"
+        - "60"
+        - "66"
+        - "72"
+        - "78"
+        - "84"
+        - "90"
+        - "96"
+        - "102"
+        - "108"
+        - "114"
+        - "120"
+        # ... up to 360 (15 days * 24h)
+    data_format:
+      required: false
+      default: netcdf
+      valid_values:
+        - netcdf
+        - grib2
+    download_format:
+      required: false
+      default: zip
+      valid_values:
+        - zip
+        - unarchived
+    product_type:
+      required: false
+      default: [control_forecast]
+      valid_values:
+        - control_forecast
+        - ensemble_perturbed_forecasts
+        - high_resolution_forecast
+    originating_centre:
+      required: false
+      default: ecmwf
+      valid_values:
+        - ecmwf
+        - dwd
+        - cosmo_leps
+    system_version:
+      required: false
+      default: [operational]
+      valid_values:
+        - operational
+        - "version_4_0"
+  constraints:
+    - description: "DWD only provides high_resolution_forecast"
+      rule:
+        originating_centre: [dwd]
+        product_type: [high_resolution_forecast]
+    - description: "COSMO-LEPS only provides ensemble_perturbed_forecasts"
+      rule:
+        originating_centre: [cosmo_leps]
+        product_type: [ensemble_perturbed_forecasts]
+    - description: "ECMWF provides control and ensemble forecasts"
+      rule:
+        originating_centre: [ecmwf]
+        product_type: [control_forecast, ensemble_perturbed_forecasts]
+    - description: "Soil moisture only at soil_levels"
+      rule:
+        variable: [volumetric_soil_moisture]
+        model_levels: [soil_levels]
+    - description: "Data available from October 2018 onwards"
+      rule:
+        year: ["2018"]
+        month: ["10", "11", "12"]
+
+sis-ecv-cmip5-bias-corrected:
+  description: "Essential climate variables for water sector applications (bias-corrected CMIP5)"
+  temporal_coverage: "1978 to 2100"
+  horizontal_resolution: "0.5° x 0.5°"
+  official_constraints: "constraints/sis-ecv-cmip5-bias-corrected.json"
+  dimensions:
+    variable:
+      required: true
+      valid_values:
+        - 2m_temperature
+        - maximum_2m_temperature
+        - minimum_2m_temperature
+        - precipitation
+    period:
+      required: true
+      # Monthly periods in format YYYYMM, covering 1978-2100
+      valid_values:
+        - "197801"
+        - "197802"
+        - "197803"
+        - "197804"
+        - "197805"
+        - "197806"
+        - "197807"
+        - "197808"
+        - "197809"
+        - "197810"
+        - "197811"
+        - "197812"
+        # ... all months from 1978 to 2100
+        # Representative examples:
+        - "200601"
+        - "200602"
+        - "200603"
+        - "200604"
+        - "200605"
+        - "200606"
+        - "200607"
+        - "200608"
+        - "200609"
+        - "200610"
+        - "200611"
+        - "200612"
+        - "20060101_20301231"
+    model:
+      required: false
+      default: access1_0
+      valid_values:
+        - access1_0
+        - bcc_csm1_1
+        - bnu_esm
+        - canesm2
+        - ccsm4
+        - cesm1_bgc
+        - cnrm_cm5
+        - csiro_mk3_6_0
+        - ec_earth
+        - fgoals_g2
+        - gfdl_cm3
+        - gfdl_esm2m
+        - hadgem2_es
+        - ipsl_cm5a_lr
+        - ipsl_cm5a_mr
+        - miroc5
+        - mpi_esm_lr
+        - noresm1_m
+    experiment:
+      required: false
+      default: rcp_8_5
+      valid_values:
+        - historical
+        - rcp_2_6
+        - rcp_4_5
+        - rcp_8_5
+  constraints:
+    - description: "Historical experiment covers 1978-2005"
+      rule:
+        experiment: [historical]
+    - description: "RCP experiments cover 2006-2100"
+      rule:
+        experiment: [rcp_2_6, rcp_4_5, rcp_8_5]
+
+sis-european-wind-storm-indicators:
+  description: "Winter windstorm indicators for Europe from 1979 to 2021"
+  temporal_coverage: "1979 to 2021"
+  official_constraints: "constraints/sis-european-wind-storm-indicators.json"
+  dimensions:
+    variable:
+      required: false
+      default: all
+      valid_values:
+        - all
+    product:
+      required: false
+      default: [windstorm_footprints]
+      valid_values:
+        - windstorm_tracks
+        - windstorm_footprints
+        - summary_indicators
+        - loss_indicators
+    year:
+      required: false
+      default: ["1990"]
+      valid_values:
+        - "1979"
+        - "1980"
+        - "1981"
+        - "1982"
+        - "1983"
+        - "1984"
+        - "1985"
+        - "1986"
+        - "1987"
+        - "1988"
+        - "1989"
+        - "1990"
+        - "1991"
+        - "1992"
+        - "1993"
+        - "1994"
+        - "1995"
+        - "1996"
+        - "1997"
+        - "1998"
+        - "1999"
+        - "2000"
+        - "2001"
+        - "2002"
+        - "2003"
+        - "2004"
+        - "2005"
+        - "2006"
+        - "2007"
+        - "2008"
+        - "2009"
+        - "2010"
+        - "2011"
+        - "2012"
+        - "2013"
+        - "2014"
+        - "2015"
+        - "2016"
+        - "2017"
+        - "2018"
+        - "2019"
+        - "2020"
+        - "2021"
+    month:
+      required: false
+      default: ["01"]
+      valid_values:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+    day:
+      required: false
+      default: ["25"]
+      valid_values:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+        - "13"
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+        - "27"
+        - "28"
+        - "29"
+        - "30"
+        - "31"
+    spatial_aggregation:
+      required: false
+      default: [other]
+      valid_values:
+        - other
+        - country
+        - nuts
+  constraints:
+    - description: "Windstorm footprints returns gridded NetCDF; requires year/month/day"
+      rule:
+        product: [windstorm_footprints]
+    - description: "Summary indicators and loss indicators return CSV in ZIP (not suitable for spatial extraction)"
+      rule:
+        product: [summary_indicators, loss_indicators]
+    - description: "Windstorm tracks provide storm trajectories (not gridded data)"
+      rule:
+        product: [windstorm_tracks]
+
+# =============================================================================
+# Spatial Feature Constraints (common to all datasets)
+# =============================================================================
+spatial_features:
+  types:
+    - boundingbox
+    - polygon
+  boundingbox:
+    description: "Two coordinate pairs: [[lat_min, lon_min], [lat_max, lon_max]]"
+    coordinate_count: 2
+  polygon:
+    description: "Closed ring of coordinate pairs: [[lat1, lon1], ..., [lat1, lon1]]"
+    min_coordinate_count: 4  # minimum 3 vertices + closing point

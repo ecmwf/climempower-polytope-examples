@@ -1,0 +1,4038 @@
+[
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "high_utci_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "days_with_high_fire_danger",
+      "mean_wind_speed",
+      "extreme_wind_speed_days",
+      "fire_weather_index"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "high_utci_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "days_with_high_fire_danger",
+      "mean_wind_speed",
+      "extreme_wind_speed_days",
+      "snowfall_amount",
+      "fire_weather_index"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "high_utci_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "days_with_high_fire_danger",
+      "mean_wind_speed",
+      "extreme_wind_speed_days",
+      "fire_weather_index"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "high_utci_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "days_with_high_fire_danger",
+      "mean_wind_speed",
+      "extreme_wind_speed_days",
+      "fire_weather_index"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "regional_layer": [
+      "nuts_level_3"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "origin": [
+      "reanalysis"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "wrf331f"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "wrf331f"
+    ],
+    "regional_layer": [
+      "nuts_level_3"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cm5a_mr",
+      "cnrm_cm5",
+      "ec_earth",
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cm5a_mr",
+      "cnrm_cm5",
+      "ec_earth",
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "nuts_level_3"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cnrm_cm5"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "aladin53"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cnrm_cm5"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "aladin53"
+    ],
+    "regional_layer": [
+      "nuts_level_3"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17",
+      "this_is_another_remo2009"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17",
+      "this_is_another_remo2009"
+    ],
+    "regional_layer": [
+      "nuts_level_3"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "snowfall_amount"
+    ]
+  },
+  {
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cnrm_cm5",
+      "ec_earth",
+      "hadgem2_es",
+      "ipsl_cm5a_mr",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "days_with_high_fire_danger",
+      "fire_weather_index"
+    ]
+  },
+  {
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "cnrm_cm5",
+      "ec_earth",
+      "hadgem2_es",
+      "ipsl_cm5a_mr",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "days_with_high_fire_danger",
+      "fire_weather_index"
+    ]
+  },
+  {
+    "experiment": [
+      "ssp5_8_5"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "relative_sea_level_rise"
+    ]
+  },
+  {
+    "experiment": [
+      "ssp5_8_5"
+    ],
+    "gcm": [
+      "cm2_vhr4",
+      "ec_earth3p_hr",
+      "hadgem3_gc31_hm",
+      "hadgem3_gc31_hm_sst"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "extreme_sea_level"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17",
+      "racmo22e",
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17",
+      "racmo22e",
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_river_discharge",
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17",
+      "racmo22e",
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "yearly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "1_in_10_year",
+      "1_in_2_year",
+      "1_in_50_year",
+      "1_in_5_year"
+    ],
+    "rcm": [
+      "cclm4_8_17",
+      "racmo22e",
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "flood_recurrence"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r12i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_river_discharge",
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "yearly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "1_in_10_year",
+      "1_in_2_year",
+      "1_in_50_year",
+      "1_in_5_year"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "flood_recurrence"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_river_discharge",
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "yearly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "1_in_10_year",
+      "1_in_2_year",
+      "1_in_50_year",
+      "1_in_5_year"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "flood_recurrence"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth",
+      "hadgem2_es"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "racmo22e"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "hadgem2_es",
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "rca4"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ipsl_cm5a_mr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "wrf381p"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "cclm4_8_17"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "noresm1_m"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1",
+      "r2i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "csc_remo2009"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1",
+      "r2i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "csc_remo2009"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_river_discharge",
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1",
+      "r2i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "csc_remo2009"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "yearly"
+    ],
+    "variable": [
+      "aridity_actual",
+      "mean_soil_moisture"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r1i1p1",
+      "r2i1p1"
+    ],
+    "experiment": [
+      "historical",
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "mpi_esm_lr"
+    ],
+    "hydrological_model": [
+      "e_hype",
+      "vic_wur"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "1_in_10_year",
+      "1_in_2_year",
+      "1_in_50_year",
+      "1_in_5_year"
+    ],
+    "rcm": [
+      "csc_remo2009"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "flood_recurrence"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "yearly"
+    ],
+    "variable": [
+      "mean_temperature",
+      "growing_degree_days",
+      "heating_degree_days",
+      "cooling_degree_days",
+      "tropical_nights",
+      "warmest_three_day_period",
+      "heatwave_days",
+      "frost_days",
+      "total_precipitation",
+      "maximum_consecutive_five_day_precipitation",
+      "extreme_precipitation_total",
+      "frequency_of_extreme_precipitation",
+      "consecutive_dry_days",
+      "duration_of_meteorological_droughts",
+      "magnitude_of_meteorological_droughts",
+      "mean_wind_speed",
+      "extreme_wind_speed_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "30_c",
+      "35_c",
+      "40_c"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "hot_days"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "spatial_aggregation": [
+      "gridded"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  },
+  {
+    "ensemble_member": [
+      "r3i1p1"
+    ],
+    "experiment": [
+      "rcp4_5",
+      "rcp8_5"
+    ],
+    "gcm": [
+      "ec_earth"
+    ],
+    "origin": [
+      "projections"
+    ],
+    "other_parameters": [
+      "max",
+      "mean",
+      "min"
+    ],
+    "rcm": [
+      "hirham5"
+    ],
+    "regional_layer": [
+      "eea_32",
+      "eea_38",
+      "eu_27",
+      "adriatic_ionian",
+      "alpine_space",
+      "atlantic_area",
+      "baltic_sea_region",
+      "central_europe",
+      "danube",
+      "mediterranean",
+      "north_sea",
+      "north_west_europe",
+      "northern_periphery_and_arctic",
+      "south_west_europe",
+      "non_nuts",
+      "nuts_level_0",
+      "nuts_level_1",
+      "nuts_level_2"
+    ],
+    "spatial_aggregation": [
+      "regional_layer"
+    ],
+    "temporal_aggregation": [
+      "monthly",
+      "seasonal",
+      "yearly"
+    ],
+    "variable": [
+      "daily_maximum_temperature",
+      "daily_minimum_temperature"
+    ]
+  }
+]
