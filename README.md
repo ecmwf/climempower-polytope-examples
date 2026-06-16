@@ -15,44 +15,6 @@ The request body always has two top-level keys:
 - `request` — dataset-specific fields (variable, period, experiment, etc.)
 - `feature` — the spatial shape to extract
 
-### Response behaviour (hybrid async)
-
-The API uses a hybrid sync/async pattern:
-
-- **Fast requests** (completes within ~30s): returns **HTTP 200** with a CoverageJSON response directly.
-- **Slow requests** (e.g. CORDEX, EFAS, CMIP5): returns **HTTP 202 Accepted** with a job reference:
-
-```json
-{"job_id": "abc123def456", "status": "processing", "poll_url": "/api/v1/jobs/abc123def456"}
-```
-
-To retrieve the result, poll the job endpoint:
-
-```
-GET https://polytope-dss.ecmwf.int/api/v1/jobs/{job_id}
-```
-
-- While processing: **HTTP 202** `{"job_id": "...", "status": "processing"}`
-- On completion: **HTTP 200** with the CoverageJSON result
-- On failure: **HTTP 502** with error details
-
-**Recommended polling pattern:**
-
-```python
-import time, requests
-
-response = requests.post(url, json=payload)
-if response.status_code == 202:
-    poll_url = "https://polytope-dss.ecmwf.int" + response.json()["poll_url"]
-    while True:
-        time.sleep(10)
-        response = requests.get(poll_url)
-        if response.status_code != 202:
-            break
-
-data = response.json()
-```
-
 ### Constraints endpoint
 
 ```
