@@ -15,6 +15,52 @@ The request body always has two top-level keys:
 - `request` — dataset-specific fields (variable, period, experiment, etc.)
 - `feature` — the spatial shape to extract
 
+### Response behaviour (hybrid async)
+
+The API uses a hybrid sync/async pattern:
+
+- **Fast requests** (completes within ~30s): returns **HTTP 200** with a CoverageJSON response directly.
+- **Slow requests** (e.g. CORDEX, EFAS, CMIP5): returns **HTTP 202 Accepted** with a job reference:
+
+```json
+{"job_id": "abc123def456", "status": "processing", "poll_url": "/api/v1/jobs/abc123def456"}
+```
+
+To retrieve the result, poll the job endpoint:
+
+```
+GET https://polytope-dss.ecmwf.int/api/v1/jobs/{job_id}
+```
+
+- While processing: **HTTP 202** `{"job_id": "...", "status": "processing"}`
+- On completion: **HTTP 200** with the CoverageJSON result
+- On failure: **HTTP 502** with error details
+
+**Recommended polling pattern:**
+
+```python
+import time, requests
+
+response = requests.post(url, json=payload)
+if response.status_code == 202:
+    poll_url = "https://polytope-dss.ecmwf.int" + response.json()["poll_url"]
+    while True:
+        time.sleep(10)
+        response = requests.get(poll_url)
+        if response.status_code != 202:
+            break
+
+data = response.json()
+```
+
+### Constraints endpoint
+
+```
+GET https://polytope-dss.ecmwf.int/api/v1/dataset/<dataset-id>/constraints/
+```
+
+Returns the official CDS constraint JSON for a dataset, listing all valid parameter combinations.
+
 ### Supported shapes
 
 | Dataset | Dataset ID | Bounding box | Polygon |
@@ -40,13 +86,15 @@ The request body always has two top-level keys:
 
 Fields without a default value are **mandatory**. Fields with a default value are optional — the default is shown in parentheses.
 
+**Dynamic defaults:** When you omit a field, the API will automatically infer it from the constraints JSON based on the fields you *did* provide. If only one valid option exists for a missing field (given your other parameters), it is filled in automatically. If multiple options are possible, the first valid option (alphabetically) is selected. You can always override by explicitly providing the field.
+
 ### `sis-heat-and-cold-spells`
 
 | Field | Mandatory | Example / default |
 |-------|:---------:|-------------------|
 | `variable` | yes | `["heat_wave_days"]` |
-| `definition` | no | `"country_related"` |
-| `experiment` | no | `["rcp8_5"]` |
+| `experiment` | dynamic | `["rcp8_5"]` |
+| `definition` | dynamic | `"country_related"` |
 | `ensemble_statistic` | no | `["ensemble_members_average"]` |
 
 **Available `variable` values:**
@@ -65,13 +113,13 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `variable` | yes | `["river_discharge"]` |
 | `period` | yes | `["2041_2070"]` |
 | `time_aggregation` | yes | `"annual_mean"` |
+| `experiment` | dynamic | `["rcp_8_5"]` |
+| `gcm` | dynamic | `"mpi_esm_lr"` |
+| `rcm` | dynamic | `"csc_remo2009"` |
+| `hydrological_model` | dynamic | `["e_hypegrid"]` |
+| `ensemble_member` | dynamic | `["r1i1p1"]` |
 | `product_type` | no | `"climate_impact_indicators"` |
 | `variable_type` | no | `"absolute_values"` |
-| `experiment` | no | `["historical"]` |
-| `hydrological_model` | no | `["e_hypegrid"]` |
-| `rcm` | no | `"csc_remo2009"` |
-| `gcm` | no | `"mpi_esm_lr"` |
-| `ensemble_member` | no | `["r1i1p1"]` |
 
 **Available `variable` values:**
 
@@ -107,12 +155,13 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 |-------|:---------:|-------------------|
 | `variable` | yes | `["total_precipitation"]` |
 | `temporal_aggregation` | yes | `["yearly"]` |
-| `origin` | no | `"projections"` |
-| `gcm` | no | `["ec_earth"]` |
-| `rcm` | no | `["racmo22e"]` |
-| `experiment` | no | `["rcp4_5"]` |
-| `ensemble_member` | no | `["r1i1p1"]` |
+| `origin` | dynamic | `"projections"` |
+| `gcm` | dynamic | `["ec_earth"]` |
+| `rcm` | dynamic | `["racmo22e"]` |
+| `experiment` | dynamic | `["rcp4_5"]` |
+| `ensemble_member` | dynamic | `["r1i1p1"]` |
 | `spatial_aggregation` | no | `"gridded"` |
+| `version` | no | `"v2_0"` |
 
 **Available `variable` values:**
 
@@ -158,8 +207,8 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `variable` | yes | `["growing_season_length"]` |
 | `period` | yes | `["201101_204012"]` |
 | `temporal_aggregation` | yes | `"annual"` |
-| `origin` | no | `"noresm1_m_model"` |
-| `experiment` | no | `"rcp4_5"` |
+| `origin` | dynamic | `"noresm1_m_model"` |
+| `experiment` | dynamic | `"rcp4_5"` |
 | `version` | no | `["1_0"]` |
 
 **Available `variable` values:**
@@ -202,9 +251,9 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `variable` | yes | `["seasonal_fire_weather_index"]` |
 | `period` | yes | `["2021_2025"]` |
 | `time_aggregation` | yes | `"seasonal_indicators"` |
+| `experiment` | dynamic | `"historical"` |
 | `product_type` | no | `"single_model"` |
 | `gcm_model` | no | `["ec_earth"]` |
-| `experiment` | no | `"historical"` |
 | `version` | no | `"v1_0"` |
 
 **Available `variable` values:**
@@ -227,12 +276,12 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `start_year` | yes | `["1951"]` |
 | `end_year` | yes | `["1955"]` |
 | `temporal_resolution` | yes | `"daily_mean"` |
+| `experiment` | dynamic | `"historical"` |
+| `gcm_model` | dynamic | `"ichec_ec_earth"` |
+| `rcm_model` | dynamic | `"knmi_racmo22e"` |
+| `ensemble_member` | dynamic | `"r1i1p1"` |
 | `domain` | no | `"europe"` |
-| `experiment` | no | `"historical"` |
 | `horizontal_resolution` | no | `"0_11_degree_x_0_11_degree"` |
-| `gcm_model` | no | `"ichec_ec_earth"` |
-| `rcm_model` | no | `"knmi_racmo22e"` |
-| `ensemble_member` | no | `"r1i1p1"` |
 | `format` | no | `"zip"` |
 
 **Available `variable` values:**
@@ -273,8 +322,8 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 |-------|:---------:|-------------------|
 | `variable` | yes | `["mean_2m_temperature"]` |
 | `period` | yes | `["20060101_20301231"]` |
+| `experiment` | dynamic | `"rcp_8_5"` |
 | `model` | no | `"access1_0"` |
-| `experiment` | no | `"rcp_8_5"` |
 
 **Available `variable` values:**
 
