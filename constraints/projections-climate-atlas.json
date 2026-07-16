@@ -1,0 +1,493 @@
+[
+  {
+    "origin": [
+      "cmip5"
+    ],
+    "experiment": [
+      "historical"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "1850-2005",
+      "1950-2005"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature"
+    ]
+  },
+  {
+    "origin": [
+      "cmip5"
+    ],
+    "experiment": [
+      "rcp_2_6"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2006-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature"
+    ]
+  },
+  {
+    "origin": [
+      "cmip5"
+    ],
+    "experiment": [
+      "rcp_4_5"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2006-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature"
+    ]
+  },
+  {
+    "origin": [
+      "cmip5"
+    ],
+    "experiment": [
+      "rcp_8_5"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2006-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature"
+    ]
+  },
+  {
+    "origin": [
+      "cmip6"
+    ],
+    "experiment": [
+      "historical"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "1850-2014",
+      "1950-2014"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_acidity_of_seawater",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_accumulated_snowfall_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_mean_of_sea_ice_area_percentage",
+      "monthly_mean_of_sea_surface_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cmip6"
+    ],
+    "experiment": [
+      "ssp1_2_6"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2015-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_acidity_of_seawater",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_accumulated_snowfall_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_mean_of_sea_ice_area_percentage",
+      "monthly_mean_of_sea_surface_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cmip6"
+    ],
+    "experiment": [
+      "ssp2_4_5"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2015-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_acidity_of_seawater",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_accumulated_snowfall_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_mean_of_sea_ice_area_percentage",
+      "monthly_mean_of_sea_surface_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cmip6"
+    ],
+    "experiment": [
+      "ssp3_7_0"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2015-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_acidity_of_seawater",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_accumulated_snowfall_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_mean_of_sea_ice_area_percentage",
+      "monthly_mean_of_sea_surface_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cmip6"
+    ],
+    "experiment": [
+      "ssp5_8_5"
+    ],
+    "domain": [
+      "global"
+    ],
+    "period": [
+      "2015-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_acidity_of_seawater",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_accumulated_snowfall_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_mean_of_sea_ice_area_percentage",
+      "monthly_mean_of_sea_surface_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cordex"
+    ],
+    "experiment": [
+      "historical"
+    ],
+    "domain": [
+      "africa",
+      "antarctica",
+      "arctic",
+      "australasia",
+      "central_america",
+      "east_asia",
+      "europe",
+      "north_america",
+      "south_america",
+      "south_asia",
+      "southeast_asia"
+    ],
+    "period": [
+      "1970-2005"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cordex"
+    ],
+    "experiment": [
+      "rcp_2_6"
+    ],
+    "domain": [
+      "africa",
+      "australasia",
+      "central_america",
+      "east_asia",
+      "europe",
+      "north_america",
+      "south_america",
+      "south_asia",
+      "southeast_asia"
+    ],
+    "period": [
+      "2006-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cordex"
+    ],
+    "experiment": [
+      "rcp_4_5"
+    ],
+    "domain": [
+      "africa",
+      "antarctica",
+      "arctic",
+      "australasia",
+      "central_america",
+      "east_asia",
+      "europe",
+      "north_america",
+      "south_america",
+      "south_asia",
+      "southeast_asia"
+    ],
+    "period": [
+      "2006-2098",
+      "2006-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  },
+  {
+    "origin": [
+      "cordex"
+    ],
+    "experiment": [
+      "rcp_8_5"
+    ],
+    "domain": [
+      "africa",
+      "antarctica",
+      "arctic",
+      "australasia",
+      "central_america",
+      "east_asia",
+      "europe",
+      "north_america",
+      "south_america",
+      "south_asia",
+      "southeast_asia"
+    ],
+    "period": [
+      "2006-2098",
+      "2006-2100"
+    ],
+    "variable": [
+      "annual_consecutive_dry_days",
+      "annual_cooling_degree_days",
+      "annual_heating_degree_days",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_days_with_maximum_temperature_above_35_c",
+      "monthly_count_of_days_with_maximum_temperature_above_40_c",
+      "monthly_count_of_frost_days",
+      "monthly_maximum_of_1_day_accumulated_precipitation",
+      "monthly_maximum_of_5_day_accumulated_precipitation",
+      "monthly_maximum_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_accumulated_precipitation",
+      "monthly_mean_of_daily_maximum_temperature",
+      "monthly_mean_of_daily_mean_temperature",
+      "monthly_mean_of_daily_mean_wind_speed",
+      "monthly_mean_of_daily_minimum_temperature",
+      "monthly_minimum_of_daily_minimum_temperature",
+      "standardized_precipitation_index_for_6_months_cumulation_period"
+    ]
+  }
+]
