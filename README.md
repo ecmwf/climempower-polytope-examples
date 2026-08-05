@@ -15,6 +15,35 @@ The request body always has two top-level keys:
 - `request` — dataset-specific fields (variable, period, experiment, etc.)
 - `feature` — the spatial shape to extract
 
+### Constraints endpoint
+
+```
+GET https://polytope-dss.ecmwf.int/api/v1/dataset/<dataset-id>/constraints/
+```
+
+Returns the official CDS constraint JSON for a dataset, listing all valid parameter combinations.
+
+### Variable metadata endpoint
+
+```
+GET https://polytope-dss.ecmwf.int/api/v1/dataset/<dataset-id>/variable_metadata/
+```
+
+Returns metadata for all variables in a dataset, including:
+- `type` — whether the variable is `"Reanalysis"`, `"Climate Projection"`, `"Forecast"`, etc.
+- `description` — official CDS description of the variable
+- `unit` — physical unit (where available)
+
+This metadata is also injected into CovJSON responses under the `parameters` section.
+
+### Units endpoint
+
+```
+GET https://polytope-dss.ecmwf.int/api/v1/dataset/<dataset-id>/units/
+```
+
+Returns a mapping of variable names to their units for the given dataset.
+
 ### Supported shapes
 
 | Dataset | Dataset ID | Bounding box | Polygon |
@@ -29,10 +58,29 @@ The request body always has two top-level keys:
 | European Wind Storm Indicators | `sis-european-wind-storm-indicators` | ✓ | ✓ |
 | EFAS Forecast | `efas-forecast` | ✓ | ✓ |
 | EFAS Seasonal | `efas-seasonal` | ✓ | ✓ |
+| **IPCC AR6 Atlas Projections** | `projections-climate-atlas` | ✓ | ✓ |
 
 **Bounding box** — `"type": "boundingbox"`, coordinates are `[[lat_min, lon_min], [lat_max, lon_max]]`
 
 **Polygon** — `"type": "polygon"`, coordinates are a closed ring of `[lat, lon]` pairs (first and last point must be identical)
+
+---
+
+## Default behaviour
+
+### Dynamic defaults
+
+When you omit a field, the API will automatically infer it from the constraints JSON based on the fields you *did* provide. If only one valid option exists for a missing field (given your other parameters), it is filled in automatically. If multiple options are possible, the API selects based on preferred values.
+
+### Preferred defaults (RCP 8.5)
+
+All climate-projection datasets default to **RCP 8.5** when the experiment field is omitted. This applies to: ECDE, heat-and-cold-spells, hydrology, agroclimatic, tourism, CORDEX, ECV-CMIP5, and projections-climate-atlas.
+
+### EFAS Forecast defaults
+
+- **Date**: defaults to 31 days ago (most recent reliably available forecast)
+- **Lead time**: defaults to `["24", "48", "72", "120", "240"]` (5 forecast steps)
+- Time labels are included in the CovJSON response derived from the forecast valid time
 
 ---
 
@@ -45,8 +93,8 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | Field | Mandatory | Example / default |
 |-------|:---------:|-------------------|
 | `variable` | yes | `["heat_wave_days"]` |
-| `definition` | no | `"country_related"` |
-| `experiment` | no | `["rcp8_5"]` |
+| `experiment` | dynamic | `["rcp8_5"]` |
+| `definition` | dynamic | `"country_related"` |
 | `ensemble_statistic` | no | `["ensemble_members_average"]` |
 
 **Available `variable` values:**
@@ -65,13 +113,13 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `variable` | yes | `["river_discharge"]` |
 | `period` | yes | `["2041_2070"]` |
 | `time_aggregation` | yes | `"annual_mean"` |
+| `experiment` | dynamic | `["rcp_8_5"]` |
+| `gcm` | dynamic | `"mpi_esm_lr"` |
+| `rcm` | dynamic | `"csc_remo2009"` |
+| `hydrological_model` | dynamic | `["e_hypegrid"]` |
+| `ensemble_member` | dynamic | `["r1i1p1"]` |
 | `product_type` | no | `"climate_impact_indicators"` |
 | `variable_type` | no | `"absolute_values"` |
-| `experiment` | no | `["historical"]` |
-| `hydrological_model` | no | `["e_hypegrid"]` |
-| `rcm` | no | `"csc_remo2009"` |
-| `gcm` | no | `"mpi_esm_lr"` |
-| `ensemble_member` | no | `["r1i1p1"]` |
 
 **Available `variable` values:**
 
@@ -106,48 +154,49 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | Field | Mandatory | Example / default |
 |-------|:---------:|-------------------|
 | `variable` | yes | `["total_precipitation"]` |
-| `temporal_aggregation` | yes | `["yearly"]` |
-| `origin` | no | `"projections"` |
-| `gcm` | no | `["ec_earth"]` |
-| `rcm` | no | `["racmo22e"]` |
-| `experiment` | no | `["rcp4_5"]` |
-| `ensemble_member` | no | `["r1i1p1"]` |
+| `temporal_aggregation` | no | `["monthly"]` (default) |
+| `origin` | dynamic | `"projections"` |
+| `gcm` | dynamic | `["ec_earth"]` |
+| `rcm` | dynamic | `["rca4"]` |
+| `experiment` | dynamic | `["rcp8_5"]` |
+| `ensemble_member` | dynamic | `["r12i1p1"]` |
 | `spatial_aggregation` | no | `"gridded"` |
+| `version` | no | `"v2_0"` |
 
 **Available `variable` values:**
 
-| Value |
-|-------|
-| `aridity_actual` |
-| `consecutive_dry_days` |
-| `cooling_degree_days` |
-| `daily_maximum_temperature` |
-| `daily_minimum_temperature` |
-| `days_with_high_fire_danger` |
-| `duration_of_meteorological_droughts` |
-| `extreme_precipitation_total` |
-| `extreme_sea_level` |
-| `extreme_wind_speed_days` |
-| `fire_weather_index` |
-| `flood_recurrence` |
-| `frequency_of_extreme_precipitation` |
-| `frost_days` |
-| `growing_degree_days` |
-| `heating_degree_days` |
-| `heatwave_days` |
-| `high_utci_days` |
-| `hot_days` |
-| `magnitude_of_meteorological_droughts` |
-| `maximum_consecutive_five_day_precipitation` |
-| `mean_river_discharge` |
-| `mean_soil_moisture` |
-| `mean_temperature` |
-| `mean_wind_speed` |
-| `relative_sea_level_rise` |
-| `snowfall_amount` |
-| `total_precipitation` |
-| `tropical_nights` |
-| `warmest_three_day_period` |
+| Value | Description |
+|-------|-------------|
+| `aridity_actual` | Monthly mean ratio of actual evapotranspiration to precipitation over 30 years |
+| `consecutive_dry_days` | Longest period of consecutive days with daily precipitation below 1 mm |
+| `cooling_degree_days` | Cumulative sum of daily degrees above 22°C |
+| `daily_maximum_temperature` | Maximum value of daily maximum temperature of a period |
+| `daily_minimum_temperature` | Minimum value of daily minimum temperature of a period |
+| `days_with_high_fire_danger` | Days with Fire Weather Index > 30 (EFFIS classification) |
+| `duration_of_meteorological_droughts` | Months with anomalously low precipitation (SPI-3 based) |
+| `extreme_precipitation_total` | Total precipitation exceeding the 99th percentile of reference period |
+| `extreme_sea_level` | Total water level for 100-year return period |
+| `extreme_wind_speed_days` | Days with 10m wind speed above 98th percentile threshold |
+| `fire_weather_index` | Canadian FWI — composite fire danger indicator |
+| `flood_recurrence` | 50-year flood recurrence (ensemble mean) |
+| `frequency_of_extreme_precipitation` | Days with precipitation above 95th percentile threshold |
+| `frost_days` | Days with daily minimum temperature below 0°C |
+| `growing_degree_days` | Cumulative sum of daily degrees above 5°C |
+| `heating_degree_days` | Cumulative sum of daily degrees below 15.5°C |
+| `heatwave_days` | Climatological hot days (≥3 consecutive days exceeding 99th percentile of daily max temp) |
+| `high_utci_days` | Days with Universal Thermal Climate Index above 32°C |
+| `hot_days` | Days with daily maximum temperature above 30°C |
+| `magnitude_of_meteorological_droughts` | Cumulative severity of drought events (SPI-3 based) |
+| `maximum_consecutive_five_day_precipitation` | Maximum 5-day precipitation total |
+| `mean_river_discharge` | Mean annual daily river discharge over 30 years |
+| `mean_soil_moisture` | Mean soil moisture in root zone as fraction of field capacity |
+| `mean_temperature` | Air temperature at 2m above the surface |
+| `mean_wind_speed` | Mean 10m wind speed |
+| `relative_sea_level_rise` | Annual mean sea level relative to 1986-2005 |
+| `snowfall_amount` | Cumulative snowfall during winter sports season (Nov-Apr) |
+| `total_precipitation` | Accumulated liquid and frozen precipitation |
+| `tropical_nights` | Days with minimum temperature above 20°C |
+| `warmest_three_day_period` | Highest daily mean temperature averaged over 3-day window |
 
 ---
 
@@ -158,8 +207,8 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `variable` | yes | `["growing_season_length"]` |
 | `period` | yes | `["201101_204012"]` |
 | `temporal_aggregation` | yes | `"annual"` |
-| `origin` | no | `"noresm1_m_model"` |
-| `experiment` | no | `"rcp4_5"` |
+| `origin` | dynamic | `"noresm1_m_model"` |
+| `experiment` | dynamic | `"rcp8_5"` |
 | `version` | no | `["1_0"]` |
 
 **Available `variable` values:**
@@ -202,19 +251,19 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `variable` | yes | `["seasonal_fire_weather_index"]` |
 | `period` | yes | `["2021_2025"]` |
 | `time_aggregation` | yes | `"seasonal_indicators"` |
+| `experiment` | dynamic | `"rcp8_5"` |
 | `product_type` | no | `"single_model"` |
 | `gcm_model` | no | `["ec_earth"]` |
-| `experiment` | no | `"historical"` |
 | `version` | no | `"v1_0"` |
 
 **Available `variable` values:**
 
 | Value | Description |
 |-------|-------------|
-| `daily_fire_weather_index` | Daily FWI values |
-| `number_of_days_with_high_fire_danger` | Days per year with FWI > 30 |
-| `number_of_days_with_moderate_fire_danger` | Days per year with FWI > 15 |
-| `number_of_days_with_very_high_fire_danger` | Days per year with FWI > 45 |
+| `daily_fire_weather_index` | Daily FWI values — higher values indicate more favorable wildfire conditions |
+| `number_of_days_with_high_fire_danger` | Days per year with FWI > 30 (EFFIS classification) |
+| `number_of_days_with_moderate_fire_danger` | Days per year with FWI > 15 (EFFIS classification) |
+| `number_of_days_with_very_high_fire_danger` | Days per year with FWI > 45 (EFFIS classification) |
 | `seasonal_fire_weather_index` | Mean FWI over European fire season (Jun–Sep) |
 
 ---
@@ -227,12 +276,12 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `start_year` | yes | `["1951"]` |
 | `end_year` | yes | `["1955"]` |
 | `temporal_resolution` | yes | `"daily_mean"` |
+| `experiment` | dynamic | `"rcp_8_5"` |
+| `gcm_model` | dynamic | `"ichec_ec_earth"` |
+| `rcm_model` | dynamic | `"knmi_racmo22e"` |
+| `ensemble_member` | dynamic | `"r1i1p1"` |
 | `domain` | no | `"europe"` |
-| `experiment` | no | `"historical"` |
 | `horizontal_resolution` | no | `"0_11_degree_x_0_11_degree"` |
-| `gcm_model` | no | `"ichec_ec_earth"` |
-| `rcm_model` | no | `"knmi_racmo22e"` |
-| `ensemble_member` | no | `"r1i1p1"` |
 | `format` | no | `"zip"` |
 
 **Available `variable` values:**
@@ -273,8 +322,8 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 |-------|:---------:|-------------------|
 | `variable` | yes | `["mean_2m_temperature"]` |
 | `period` | yes | `["20060101_20301231"]` |
+| `experiment` | dynamic | `"rcp_8_5"` |
 | `model` | no | `"access1_0"` |
-| `experiment` | no | `"rcp_8_5"` |
 
 **Available `variable` values:**
 
@@ -298,9 +347,10 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `day` | no | `["25"]` |
 | `spatial_aggregation` | no | `["other"]` |
 
-**Available `variable` values:**
-
-`"all"` is the only accepted value. It returns windstorm footprint data (maximum 10m wind gust per grid point during a 72-hour storm passage). Individual variables are not selectable separately.
+**Notes:**
+- `"all"` is the only accepted variable value. It returns windstorm footprint data (maximum 10m wind gust per grid point during a 72-hour storm passage).
+- The default date (1990-01-25) corresponds to Storm Daria. You can request any storm date available in the constraints — the dataset covers winter storms from 1979–2021.
+- The data is on a high-resolution 1km grid (~0.017°). A 1°×1° bounding box returns ~3600 data points.
 
 ---
 
@@ -310,16 +360,20 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 |-------|:---------:|-------------------|
 | `variable` | yes | `["river_discharge_in_the_last_6_hours"]` |
 | `model_levels` | no | `"surface_level"` |
-| `year` | no | `["2020"]` |
-| `month` | no | `["10"]` |
-| `day` | no | `["14"]` |
+| `year` | no | auto (31 days ago) |
+| `month` | no | auto (31 days ago) |
+| `day` | no | auto (31 days ago) |
 | `time` | no | `["12:00"]` |
-| `leadtime_hour` | no | `["0"]` |
+| `leadtime_hour` | no | `["24", "48", "72", "120", "240"]` |
 | `data_format` | no | `"netcdf"` |
 | `download_format` | no | `"zip"` |
 | `product_type` | no | `["control_forecast"]` |
 | `originating_centre` | no | `"ecmwf"` |
 | `system_version` | no | `["operational"]` |
+
+**Notes:**
+- Date defaults to 31 days ago to ensure data availability.
+- Lead time defaults to 5 forecast steps (24h, 48h, 72h, 120h, 240h). The CovJSON response includes time labels for each step.
 
 **Available `variable` values:**
 
@@ -405,3 +459,55 @@ Fields without a default value are **mandatory**. Fields with a default value ar
 | `wilting_point_v3_5` | Soil wilting point (model version 3.5) |
 | `wilting_point_v4_0` | Soil wilting point (model version 4.0) |
 | `wilting_point_v5_0` | Soil wilting point (model version 5.0) |
+
+---
+
+### `projections-climate-atlas`
+
+| Field | Mandatory | Example / default |
+|-------|:---------:|-------------------|
+| `variable` | yes | `"monthly_mean_of_daily_mean_temperature"` (scalar string) |
+| `origin` | no | `"cordex"` (default) |
+| `experiment` | no | `"rcp_8_5"` (default) |
+| `domain` | no | `"europe"` (default) |
+| `period` | no | `"2006-2100"` (default) |
+
+**Notes:**
+- All fields are **scalar strings** (not lists) — the CDS API requires this for this dataset.
+- Default configuration uses CORDEX Europe downscaled projections under RCP 8.5 (2006–2100).
+- Downloads are ~447 MB for CORDEX Europe; extraction takes 3–8 minutes total.
+- Monthly variables return 1140 coverages (95 years × 12 months); annual variables return 95 coverages.
+- The response includes ensemble mean across all available models (48 members for CORDEX).
+
+**Available `variable` values:**
+
+| Value | Description |
+|-------|-------------|
+| `monthly_mean_of_daily_mean_temperature` | Monthly mean of daily mean near-surface (2m) air temperature |
+| `monthly_mean_of_daily_minimum_temperature` | Monthly mean of daily minimum near-surface air temperature |
+| `monthly_mean_of_daily_maximum_temperature` | Monthly mean of daily maximum near-surface air temperature |
+| `monthly_minimum_of_daily_minimum_temperature` | Lowest daily minimum temperature for each month |
+| `monthly_maximum_of_daily_maximum_temperature` | Highest daily maximum temperature for each month |
+| `monthly_count_of_days_with_maximum_temperature_above_35_c` | Days with daily max temperature above 35°C per month |
+| `bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_35_c` | Bias-adjusted count of days with max temp above 35°C |
+| `monthly_count_of_days_with_maximum_temperature_above_40_c` | Days with daily max temperature above 40°C per month |
+| `bias_adjusted_monthly_count_of_days_with_maximum_temperature_above_40_c` | Bias-adjusted count of days with max temp above 40°C |
+| `monthly_count_of_frost_days` | Days with daily minimum temperature below 0°C |
+| `annual_heating_degree_days` | Heating degree-days: cumulative degrees below heating threshold |
+| `annual_cooling_degree_days` | Cooling degree-days: cumulative degrees above cooling threshold |
+| `monthly_mean_of_daily_accumulated_precipitation` | Monthly mean of daily accumulated precipitation |
+| `monthly_mean_of_daily_accumulated_snowfall_precipitation` | Monthly mean of daily accumulated snowfall |
+| `monthly_maximum_of_1_day_accumulated_precipitation` | Maximum 1-day precipitation for each month (Rx1day) |
+| `monthly_maximum_of_5_day_accumulated_precipitation` | Maximum 5-day precipitation for each month (Rx5day) |
+| `annual_consecutive_dry_days` | Annual maximum consecutive dry days (CDD) |
+| `standardized_precipitation_index_for_6_months_cumulation_period` | Standardized Precipitation Index over 6-month period (SPI-6) |
+| `monthly_mean_of_daily_mean_wind_speed` | Monthly mean of daily mean 10m wind speed |
+| `monthly_mean_of_sea_surface_temperature` | Monthly mean sea surface temperature (oceanic, CMIP5/CMIP6) |
+| `monthly_mean_of_acidity_of_seawater` | Monthly mean seawater acidity (pH) |
+| `monthly_mean_of_sea_ice_area_percentage` | Monthly mean sea-ice area percentage |
+
+**Available `origin` values:** `cordex`, `cmip5`, `cmip6`
+
+**Available `experiment` values:** `rcp_2_6`, `rcp_4_5`, `rcp_8_5`, `ssp1_2_6`, `ssp2_4_5`, `ssp3_7_0`, `ssp5_8_5` (SSP experiments only available with `cmip6` origin)
+
+**Available `domain` values:** `europe`, `global` (CORDEX uses continental domains; CMIP5/CMIP6 use `global`)
